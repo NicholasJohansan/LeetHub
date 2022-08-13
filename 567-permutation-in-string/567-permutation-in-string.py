@@ -3,7 +3,6 @@ class Solution:
         s1_char_count = self.make_count_dictionary(s1)
         s2_char_count = {}
         start = 0
-        includes = False
         for end in range(len(s2)):
             char = s2[end]
             while not self.is_sub(s2_char_count, s1_char_count):
@@ -14,8 +13,8 @@ class Solution:
                 start += 1
             s2_char_count[char] = s2_char_count.get(char, 0) + 1
             if s1_char_count == s2_char_count:
-                includes = True
-        return includes
+                return True
+        return False
     
     def is_sub(self, sub_dict: dict[str, int], super_dict: dict[str, int]):
         keys_is_subset = set(sub_dict.keys()).issubset(set(super_dict.keys()))
