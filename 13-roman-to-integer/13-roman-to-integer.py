@@ -23,6 +23,5 @@ class Solution:
             s = s.replace(key, value)
         num = 0
         for char in s:
-            print(char)
             num += numeral_mapping[char]
         return num
