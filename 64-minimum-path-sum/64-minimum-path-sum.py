@@ -1,5 +1,3 @@
-from collections import deque
-
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         sums = [[float('inf') for _ in range(len(grid[i]))] for i in range(len(grid))]
