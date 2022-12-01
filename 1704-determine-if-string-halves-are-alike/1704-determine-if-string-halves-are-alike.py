@@ -4,7 +4,6 @@ class Solution:
     def halvesAreAlike(self, s: str) -> bool:
         front = s[:len(s) // 2]
         back = s[len(s) // 2:]
-        print(front, back)
         return self.get_vowel_occurences(front) == self.get_vowel_occurences(back)
     
     def get_vowel_occurences(self, s):
